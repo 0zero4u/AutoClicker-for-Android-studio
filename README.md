@@ -4,6 +4,7 @@
 ### Precautions  
 - There may be a few bugs.  
 - There might be some poor optimization.  
-- Android Studio Koala | 2024.1.1 Patch 2 (This is the current version.)
+- Android Studio Koala | 2024.1.1 Patch 2 (This is the current version.)  
+![Alt Text](![screenshot1](https://github.com/user-attachments/assets/3cd83228-1baa-4e9d-8463-5db0190d2e0c))
 
 
