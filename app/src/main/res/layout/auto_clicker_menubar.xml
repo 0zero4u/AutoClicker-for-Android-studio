@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/menuBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <ImageButton
+            android:id="@+id/startButton"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:background="#00FFFFFF"
+            android:contentDescription="start"
+            android:src="@drawable/start24" />
+
+        <ImageButton
+            android:id="@+id/addButton"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:background="#00FFFFFF"
+            android:contentDescription="add"
+            android:src="@drawable/add24" />
+
+        <ImageButton
+            android:id="@+id/deleteButton"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:background="#00FFFFFF"
+            android:contentDescription="delete"
+            android:src="@drawable/delete24" />
+
+        <ImageButton
+            android:id="@+id/dragButton"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:background="#00FFFFFF"
+            android:contentDescription="drag"
+            android:src="@drawable/drag24" />
+
+        <ImageButton
+            android:id="@+id/settingButton"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:background="#00FFFFFF"
+            android:contentDescription="end"
+            android:src="@drawable/end24" />
+    </LinearLayout>
+
+</FrameLayout>

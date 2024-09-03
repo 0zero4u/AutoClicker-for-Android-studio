@@ -1,0 +1,5 @@
+<!-- res/drawable/circle_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@android:color/transparent" /> <!-- 배경색 기본 설정 -->
+    <corners android:radius="12dp" /> <!-- 원형이 되도록 반지름 설정 -->
+</shape>
