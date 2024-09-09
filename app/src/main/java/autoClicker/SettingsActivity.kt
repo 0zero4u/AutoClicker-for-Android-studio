@@ -1,17 +1,15 @@
 package autoClicker
 
-import android.app.Activity
 import android.content.Context
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatDelegate
+import androidx.appcompat.app.AppCompatActivity
 import com.example.autoclicker.R
 
 // class that sets button duration and interval
-class SettingsActivity : Activity() {
+class SettingsActivity : AppCompatActivity() {
     private lateinit var durationEditText: EditText
     private lateinit var delayEditText: EditText
     private lateinit var saveButton: Button

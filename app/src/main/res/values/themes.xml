@@ -1,10 +1,11 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.AutoClicker" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="AutoClicker" parent="Theme.AppCompat.Light">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-
+        <item name="colorPrimary">@color/light_blue</item>
+        <item name="colorPrimaryDark">@color/little_light_blue</item>
     </style>
 
-    <style name="Theme.AutoClicker" parent="Base.Theme.AutoClicker" />
+    <style name="Theme.AutoClicker" parent="AutoClicker" />
 </resources>
