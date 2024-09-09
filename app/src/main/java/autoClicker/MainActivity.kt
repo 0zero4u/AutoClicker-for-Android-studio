@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
-import com.example.autoclicker.R
 import com.example.autoclicker.databinding.ActivityMainBinding
 
 // app main
@@ -13,7 +12,6 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var permissionHandler: PermissionHandler
-    private lateinit var clickCounter: ClickCounter
     private var allPermissionsGranted = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -57,14 +55,6 @@ class MainActivity : AppCompatActivity() {
         binding.settingButton.setOnClickListener{
             val intent = Intent(this, SettingsActivity::class.java)
             startActivity(intent)
-        }
-
-        // click per second button
-        clickCounter = ClickCounter(
-            findViewById(R.id.testButton),
-            findViewById(R.id.testTextView)
-        ).also {
-            it.start()
         }
     }
 
