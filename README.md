@@ -7,7 +7,8 @@
 - There are only five functions currently.
 - Android Studio Koala | 2024.1.1 Patch 2 (This is the current version.)  
 <p>
-  <img src="/image/screenshot1.png" alt="Image 1" width="45%" />
+  <img src="/image/screenshot1.png" alt="Image 1" />
+  <img src="/image/screenshot2.png" alt="Image 1" />
 </p>
 
 
