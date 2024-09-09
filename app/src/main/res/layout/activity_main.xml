@@ -28,16 +28,6 @@
         app:layout_constraintTop_toBottomOf="@+id/startButton" />
 
     <Button
-        android:id="@+id/testButton"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="40dp"
-        android:text="Test (Click per second)"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/settingButton" />
-
-    <Button
         android:id="@+id/permissionButton"
         android:layout_width="300dp"
         android:layout_height="50dp"
@@ -46,16 +36,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/testTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="testTextView"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/testButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
