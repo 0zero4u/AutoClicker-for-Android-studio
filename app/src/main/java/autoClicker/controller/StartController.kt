@@ -5,6 +5,7 @@ import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.GradientDrawable
 import android.util.Log
+import android.view.MotionEvent
 import android.view.View
 import android.view.WindowManager
 import android.widget.ImageView
@@ -26,35 +27,39 @@ class StartController (
 
     private fun setupStartButtonListener() {
         val startButton = floatingView.findViewById<View>(R.id.startButton)
-        startButton.setOnClickListener {
-            // if no coordinate widget, no action should be made.
-            if (coordinateStack.isEmpty()) {
-                return@setOnClickListener
-            }
+        startButton.setOnTouchListener {v, event ->
+            if (event.action == MotionEvent.ACTION_DOWN) {
+                // if no coordinate widget, no action should be made.
+                if (coordinateStack.isEmpty()) {
+                    return@setOnTouchListener true
+                }
 
-            if (!isStarting) {
-                isStarting = true
-                setTouchableFlagForAllViews(false)
-                startClickSimulationService()
-                changeMenuBarColor(true)
-                changeWidgetsBackgroundColor(true)
-            } else {
-                isStarting = false
-                setTouchableFlagForAllViews(true)
-                stopClickSimulationService()
-                changeMenuBarColor(false)
-                changeWidgetsBackgroundColor(false)
-            }
+                if (!isStarting) {
+                    isStarting = true
+                    setTouchableFlagForAllViews(false)
+                    startClickSimulationService()
+                    changeMenuBarColor(true)
+                    changeWidgetsBackgroundColor(true)
+                } else {
+                    isStarting = false
+                    setTouchableFlagForAllViews(true)
+                    stopClickSimulationService()
+                    changeMenuBarColor(false)
+                    changeWidgetsBackgroundColor(false)
+                }
 
-            // When running, the rest should have not to operate except for the start button!
-            // Of course, when running,
-            // it was possible to give the effect of pressing the start button when clicking another button...
-            val sharedPrefs = context.getSharedPreferences("startController", Context.MODE_PRIVATE)
-            with(sharedPrefs.edit()) {
-                putBoolean("start", isStarting)
-                apply()
+                // When running, the rest should have not to operate except for the start button!
+                // Of course, when running,
+                // it was possible to give the effect of pressing the start button when clicking another button...
+                val sharedPrefs = context.getSharedPreferences("startController", Context.MODE_PRIVATE)
+                with(sharedPrefs.edit()) {
+                    putBoolean("start", isStarting)
+                    apply()
+                }
+
+                v.performClick()
             }
-            Log.d("test", "edit = ${sharedPrefs.getBoolean("start", false)}")
+            false
         }
     }
 
