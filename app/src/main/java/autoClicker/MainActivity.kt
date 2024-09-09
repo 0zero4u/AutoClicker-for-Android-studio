@@ -28,7 +28,6 @@ class MainActivity : AppCompatActivity() {
             PermissionHandler.PermissionStatusCallback {
             override fun onPermissionsStatusChanged(allPermissionsGranted: Boolean) {
                 this@MainActivity.allPermissionsGranted = allPermissionsGranted
-                updateStartButtonState()
             }
         })
 
@@ -56,10 +55,6 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, SettingsActivity::class.java)
             startActivity(intent)
         }
-    }
-
-    private fun updateStartButtonState() {
-        binding.startButton.isEnabled = allPermissionsGranted
     }
 
     // overlay permission and accessibility permission
